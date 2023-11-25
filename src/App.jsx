@@ -5,7 +5,7 @@ import TaskList from "./components/TaskList";
 import { useState } from "react";
 
 function App() {
-  // Defino un estado de edición.
+  // Defino un State Local para edición, espera un id.
   const [taskToEdit, setTaskToEdit] = useState("");
 
   const onEditTask = (task) => {

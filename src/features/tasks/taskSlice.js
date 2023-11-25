@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Inicializo un estado.
 const initialState = [
   {
     id: "1",
@@ -17,9 +18,9 @@ const initialState = [
 
 export const taskSlice = createSlice({
   name: "tasks",
-  initialState: initialState, // estado inicial.
+  initialState: initialState, // asigno el estado inicial.
   reducers: {
-    // Funciones que actualizan el estado.
+    // Declaracion de funciones que actualizan el estado.
     addTask: (state, action) => {
       state.push(action.payload);
     },

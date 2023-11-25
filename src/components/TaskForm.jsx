@@ -4,7 +4,7 @@ import { addTask, updateTask } from "../features/tasks/taskSlice";
 import { v4 as uuid } from "uuid";
 
 const TaskForm = ({ taskToEdit, editTask }) => {
-  // State Local.
+  // Tarea guardada en State Local.
   const [task, setTask] = useState({
     title: "",
     description: "",
@@ -38,6 +38,7 @@ const TaskForm = ({ taskToEdit, editTask }) => {
         })
       );
     }
+    // Reset del State Local
     setTask({
       title: "",
       description: "",
@@ -46,6 +47,7 @@ const TaskForm = ({ taskToEdit, editTask }) => {
   };
 
   useEffect(() => {
+    // Efecto que busca un id de edición al iniciar el componente o al cambiar el estado en App
     if (taskToEdit) {
       const taskToUpdate = tasks.find((task) => task.id === taskToEdit);
       setTask(taskToUpdate);
