@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(136, 121, 88);
+  font-family: "Poppins", sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-weight: 900;
+  color: rgb(171, 147, 194);
+  text-shadow: 2px 2px 8px rgb(81, 11, 83);
+}
+
+form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  background-color: antiquewhite;
+}
+
+input,
+textarea,
+button {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+form button {
+  background-color: blueviolet;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: rgb(132, 65, 194);
+  }
+}
+
+.app {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 24px;
+}
+
+.task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 16px 0;
+  padding: 16px;
+  border: 2px solid gray;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px black;
+  background-color: antiquewhite;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.edit,
+.delete {
+  width: 100px;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.edit {
+  background-color: blue;
+  &:hover {
+    background-color: rgb(73, 73, 252);
+  }
+}
+
+.delete {
+  background-color: red;
+  &:hover {
+    background-color: rgb(250, 42, 42);
+  }
+}
+
+@media (min-width: 900px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
